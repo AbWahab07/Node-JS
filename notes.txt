@@ -1,0 +1,136 @@
+1- Vid REPL
+REPL stands for Read, Evaluate, Print and Loop.
+
+Operations
++, -, /, *, ==, >, <
+
+.help command
+.break or ctrl+c
+
+2- Vid Lunch Var
+lunch = 'pizza'
+single and double quotes can be used
+lunch = '12 inch pizza'
+sizeOfParty = 4
+totalCost = 14.99
+averageCost = totalCost / sizeOfParty
+
+use tab to autofill the variable name
+String concatenation
+message = 'Your Lunch of ' + lunch + ' for ' + sizeOfParty + ' people will cost you ' + averageCost
+
+3- Vid Syntax Rules
+var keyword is optional but recommended to use.
+; are optional but recommended to use.
+
+
+4- Vid Check Plz
+https://nodejs.org/api/process.html#process_process_argv
+The process.argv property returns an array containing the command line arguments passed when the Node.js process was launched.
+
+5- Vid I Declare
+Best practice to declare multiple variables with one var keyword and use this Syntax
+var x = 3,
+    y = 4;
+difference b/w undefined and Reference Error
+
+6- Vid Types
+console.log (typeof y)
+String, Number, Boolean, Object, Function
+Types are important as they determine the output of the operation you're performing e.g
+x = 3; z = '4'; y = 5;
+x + y = 8 number type (Addition)
+x + z = '34' string type (JS assumes you wanted String concatenation)
+x * z = 12 number (JS knows String can't be multiplied so it converts both into numbers and do Multiply)
+parseInt(z) returns 4 and converts String into Int.
+
+7- Vid Functions
+can declare their own variables
+can pass parameters
+can return values
+
+8- Vid Roll the Dice
+Math.random()
+Math.floor()
+Math.ceil()
+Math.round()
+
+9- Vid Definations
+use functions to keep your code DRY
+use functions to make your code readable
+changes how our program executes. e.g function code isn't executed unless we invoke the function
+
+10- Vid Scope
+where the variable is available
+Local variables are declared inside a function
+Global variables are variables not declared inside a function
+
+11- Vid Operators
+> < >= <= == != && ||
+! operator
+it's better to use && operator instaed of nested if's
+if (){
+
+}
+else if (){
+
+}
+else {
+
+}
+
+
+12- Vid While, do While
+do while always executes atleast once
+while executes 0 or more time
+
+13- Vid For Loop
+for (initialize; test; final expression) {
+
+}
+
+14- Vid Arrays
+You can put anything/ type
+var things = [1, 2, 3, "pizza"];
+for (var i = 0; i < things.length; i++){
+    console.log(things[i]);
+}
+
+15- Vid Why Objects
+Used for organizing the data.
+e.g Console, Process,
+Object have properties and Functions
+Console is the grouping of things that are related to output window
+Process is the grouping of things that are related to the Node process executed on the computer.
+
+16- Vid Create your own
+var die = {}; this syntax is known as Object Literal
+
+17- Vid Responsibility
+this referes to the current object.
+
+18- Vid Splitting Up
+require indicates you require another file to execute the code. Require still hides the info of the other file and you can use exports to show content to other files
+exports is an object similar to console/progress. you can define any property on this object to save the data you want to require in other files
+this is what termed as Encapsulation
+
+19- Setting Up (Testing)
+npm install -g nodeunit
+type nodeunit to make sure it's working.
+
+. means from the current directory
+../ means go up one directory
+
+20- Vid Express JS
+Install express via npm install express
+Boilerplate
+var express = require("express");
+var app = express();
+
+app.get('/', function (req, res) {
+    res.send('Hello World');
+});
+app.listen(3000);
+console.log("Server ready ...");
+
+req.query returns a query string
